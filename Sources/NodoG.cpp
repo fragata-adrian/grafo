@@ -1,4 +1,4 @@
-#include "./Headers/NodoG.h"
+#include "../Headers/NodoG.h"
 #include <iostream>
 
 NodoG::NodoG(string nombreCiudad, int cantAristas)
@@ -20,20 +20,20 @@ void NodoG::cambiarCiudad(string nombreCiudad)
     ciudad = nombreCiudad;
 }
 
-string NodoG::verAristas()
+void NodoG::verAristas()
 {
-    for(int i=0; i<numAristas; i++){
-        Arista* arista = (listaAristas+i);
+    
+        Arista* arista = listaAristas;
         cout << arista->obtenerOrigen()->obtenerCiudad()  << " -> " << arista->obtenerDestino()->obtenerCiudad() << " = " << arista->obtenerDistancia()<<endl;
-    }
 }
 
 void NodoG::agregarArista(NodoG* nodoOrigen, NodoG* nodoDestino, double distancia)
 {
-    Arista* guardar = (listaAristas + numAristas);
+    Arista* guardar = listaAristas;
     
     guardar->cambiarOrigen(nodoOrigen);
     guardar->cambiarDestino(nodoDestino);
     guardar->cambiarDistancia(distancia);
+    numAristas++;
 }
 

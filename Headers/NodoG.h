@@ -22,7 +22,7 @@ class NodoG
 
         Arista* obtenerAristas();
 
-        string verAristas();
+        void verAristas();
 
         void agregarArista(NodoG* nodoOrigen, NodoG* nodoDestino, double distancia);
 
