@@ -5,21 +5,21 @@
 class Arista 
 {
     private:
-        NodoG* nodoOrigen;
-        NodoG* nodoDestino;
+        NodoG* origen;
+        NodoG* destino;
         double distancia;
     public:
         // Constructor
         Arista();
-        Arista(NodoG* nodoOrigen, NodoG* nodoDestino, double distancia);
+        Arista(NodoG* nodoOrigen, NodoG* nodoDestino, double distanciaEntre);
 
-        NodoG obtenerOrigen();
+        NodoG* obtenerOrigen();
 
-        void cambiarOrigen(NodoG* nodo);
+        void cambiarOrigen(NodoG* nuevoOrigen);
 
-        NodoG obtenerDestino();
+        NodoG* obtenerDestino();
 
-        void cambiarDestino(NodoG* nodo);
+        void cambiarDestino(NodoG* nuevoDestino);
 
         double obtenerDistancia();
 

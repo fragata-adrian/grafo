@@ -10,7 +10,7 @@ class Grafo
         Grafo();
         Grafo(NodoG* primerNodo);
 
-        NodoG obtenerPrimero();
+        NodoG* obtenerPrimero();
 
         void cambiarPrimero(NodoG* nodo);
 
