@@ -2,6 +2,7 @@
 #define ARISTA_H_INCLUDED
 #include "NodoG.h"
 
+class NodoG;
 class Arista 
 {
     private:

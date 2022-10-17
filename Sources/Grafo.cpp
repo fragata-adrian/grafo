@@ -1,4 +1,4 @@
-#include "./Headers/Grafo.h"
+#include "../Headers/Grafo.h"
 
 Grafo::Grafo(NodoG* primerNodo)
 {

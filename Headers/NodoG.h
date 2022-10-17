@@ -4,6 +4,7 @@
 #include "Arista.h"
 using namespace std;
 
+class Arista;
 class NodoG
 {
     private:
