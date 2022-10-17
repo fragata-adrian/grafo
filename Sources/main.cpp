@@ -12,7 +12,7 @@ int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevIns, LPSTR lpszArgument,
     NodoG* ros = new NodoG("Rosario", 0);
     
     bsas->agregarArista(bsas, cord, 1200);
-    //bsas->agregarArista(bsas, ros, 3000);
+    bsas->agregarArista(bsas, ros, 3000);
     
     Grafo* grafo = new Grafo(bsas);
 
