@@ -6,9 +6,9 @@ class Grafo
 {
     private:
         NodoG* primero;
+        int numNodos;
     public:
         Grafo();
-        Grafo(NodoG* primerNodo);
 
         NodoG* obtenerPrimero();
 
@@ -17,6 +17,8 @@ class Grafo
         void verNodos();
 
         void eliminarNodos();
+
+        void agregarNodo(NodoG* nodo);
 };
 
 #endif //GRAFO_H_INCLUDED

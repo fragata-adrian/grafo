@@ -39,12 +39,12 @@ void Arista::cambiarDistancia(double nuevaDistancia)
     distancia = nuevaDistancia;
 }
 
-void Arista::eliminarOrigen()
+Arista* Arista::obtenerSiguiente()
 {
-    delete origen;
+    return siguiente;
 }
 
-void Arista::eliminarDestino()
+void Arista::cambiarSiguiente(Arista* nuevoSiguiente)
 {
-    delete destino;
+    siguiente = nuevoSiguiente;
 }

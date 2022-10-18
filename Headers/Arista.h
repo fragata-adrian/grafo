@@ -9,6 +9,7 @@ class Arista
         NodoG* origen;
         NodoG* destino;
         double distancia;
+        Arista* siguiente;
     public:
         // Constructor
         Arista();
@@ -26,9 +27,9 @@ class Arista
 
         void cambiarDistancia(double distancia);
 
-        void eliminarOrigen();
+        Arista* obtenerSiguiente();
 
-        void eliminarDestino();
+        void cambiarSiguiente(Arista* nuevoSiguiente);
 };
 
 #endif // ARISTA_H_INCLUDED

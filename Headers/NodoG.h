@@ -9,7 +9,8 @@ class NodoG
 {
     private:
         string ciudad;
-        Arista* listaAristas;
+        NodoG* siguiente;
+        Arista* aristaCabeza;
         int numAristas = 0;
     public:
         // Constructor
@@ -22,7 +23,11 @@ class NodoG
 
         Arista* obtenerAristas();
 
-        void verAristas();
+        void verDatos();
+
+        NodoG* obtenerSiguiente();
+
+        void cambiarSiguiente(NodoG*);
 
         void agregarArista(NodoG* nodoOrigen, NodoG* nodoDestino, double distancia);
 
