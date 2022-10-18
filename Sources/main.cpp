@@ -7,12 +7,14 @@
 int main()
 {
 
-    NodoG* bsas = new NodoG("Buenos Aires", 2);
-    NodoG* cord = new NodoG("Cordoba", 0);
-    NodoG* ros = new NodoG("Rosario", 0);
+    NodoG* bsas = new NodoG("Buenos Aires");
+    NodoG* cord = new NodoG("Cordoba");
+    NodoG* ros = new NodoG("Rosario");
     
     bsas->agregarArista(bsas, cord, 1200);
     bsas->agregarArista(bsas, ros, 3000);
+
+    ros->agregarArista(ros, bsas,3000);
     
     Grafo* grafo;
 

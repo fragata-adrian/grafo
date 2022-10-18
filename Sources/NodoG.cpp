@@ -1,7 +1,7 @@
 #include "../Headers/NodoG.h"
 #include <iostream>
 
-NodoG::NodoG(string nombreCiudad, int cantAristas)
+NodoG::NodoG(string nombreCiudad)
 {
     ciudad = nombreCiudad;
 }

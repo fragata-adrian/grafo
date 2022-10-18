@@ -15,7 +15,7 @@ class NodoG
     public:
         // Constructor
         NodoG();
-        NodoG(string nombreCiudad, int cantAristas);
+        NodoG(string nombreCiudad);
 
         string obtenerCiudad();
 
