@@ -20,6 +20,4 @@ int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevIns, LPSTR lpszArgument,
     grafo->verNodos();
     
     return 0;
-
-   
 }

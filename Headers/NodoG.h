@@ -26,7 +26,7 @@ class NodoG
 
         void agregarArista(NodoG* nodoOrigen, NodoG* nodoDestino, double distancia);
 
-        int getNumAristas();
+        void eliminarAristas();
 
 };
 

@@ -25,6 +25,10 @@ class Arista
         double obtenerDistancia();
 
         void cambiarDistancia(double distancia);
+
+        void eliminarOrigen();
+
+        void eliminarDestino();
 };
 
 #endif // ARISTA_H_INCLUDED

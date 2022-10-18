@@ -37,3 +37,12 @@ void NodoG::agregarArista(NodoG* nodoOrigen, NodoG* nodoDestino, double distanci
     numAristas++;
 }
 
+void NodoG::eliminarAristas()
+{
+    for (int i=numAristas; i>=0; i--) {
+        Arista* borrar = (listaAristas+i);
+        borrar->eliminarDestino();
+        borrar->eliminarOrigen();
+        delete borrar;
+    }
+}

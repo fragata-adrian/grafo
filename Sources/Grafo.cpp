@@ -23,3 +23,9 @@ void Grafo::verNodos()
         primero->verAristas();
     };
 }
+
+void Grafo::eliminarNodos()
+{
+    
+
+}

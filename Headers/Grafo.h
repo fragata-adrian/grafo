@@ -15,6 +15,8 @@ class Grafo
         void cambiarPrimero(NodoG* nodo);
 
         void verNodos();
+
+        void eliminarNodos();
 };
 
 #endif //GRAFO_H_INCLUDED

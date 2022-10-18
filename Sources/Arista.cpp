@@ -38,3 +38,13 @@ void Arista::cambiarDistancia(double nuevaDistancia)
 {
     distancia = nuevaDistancia;
 }
+
+void Arista::eliminarOrigen()
+{
+    delete origen;
+}
+
+void Arista::eliminarDestino()
+{
+    delete destino;
+}
