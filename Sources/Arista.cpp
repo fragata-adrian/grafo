@@ -1,4 +1,6 @@
-#include "./Headers/Arista.h"
+#include "../Headers/Arista.h"
+
+Arista::Arista(){}
 
 Arista::Arista(NodoG* nodoOrigen, NodoG* nodoDestino, double distanciaEntre)
 {
@@ -35,4 +37,14 @@ double Arista::obtenerDistancia()
 void Arista::cambiarDistancia(double nuevaDistancia)
 {
     distancia = nuevaDistancia;
+}
+
+Arista* Arista::obtenerSiguiente()
+{
+    return siguiente;
+}
+
+void Arista::cambiarSiguiente(Arista* nuevoSiguiente)
+{
+    siguiente = nuevoSiguiente;
 }
