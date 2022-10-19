@@ -34,15 +34,15 @@ void NodoG::verDatos()
     }
 }
 
- NodoG* NodoG::obtenerSiguiente()
- {
+NodoG* NodoG::obtenerSiguiente()
+{
     return siguiente;
- }
+}
 
- void NodoG::cambiarSiguiente(NodoG* nodo)
- {
+void NodoG::cambiarSiguiente(NodoG* nodo)
+{
     siguiente = nodo;
- }
+}
 
 void NodoG::agregarArista(NodoG* nodoOrigen, NodoG* nodoDestino, double distancia)
 {
@@ -81,6 +81,7 @@ void NodoG::eliminarArista(string ciudadDestino)
         Arista* borrar = aristaCabeza;
         aristaCabeza = borrar->obtenerSiguiente();
         delete borrar;
+        numAristas--;
         cout << "Se elimino la arista con destino " << ciudadDestino << endl;
     }
     else if(numAristas > 1){
@@ -91,6 +92,7 @@ void NodoG::eliminarArista(string ciudadDestino)
             if(actual->obtenerDestino()->obtenerCiudad() == ciudadDestino){
                 anterior->cambiarSiguiente(actual->obtenerSiguiente());
                 delete actual;
+                numAristas--;
                 cout << "Se elimino la arista con destino " << ciudadDestino << endl;
             }
             else{

@@ -25,6 +25,9 @@ class Grafo
         // Elimina todos los nodos y sus aristas del grafo.
         void eliminarNodos();
 
+        // Elimina del grado el nodo correspondiente con ciudad.
+        void eliminarNodo(string ciudad);
+
         // Agrega un nodo al grafo
         void agregarNodo(NodoG* nodo);
 };

@@ -36,6 +36,37 @@ void Grafo::eliminarNodos()
     }
 }
 
+void Grafo::eliminarNodo(string ciudad) 
+{
+    if(primero->obtenerCiudad() == ciudad){
+        NodoG* borrar = primero;
+        primero = borrar->obtenerSiguiente();
+        delete borrar;
+        numNodos--;
+        cout << "Se eliminó el nodo que representaba a " << ciudad << endl;
+    }
+    else if(numNodos > 1){
+        NodoG* anterior = primero;
+        
+        for (int i=1; i<numNodos; i++){
+            NodoG* actual = anterior->obtenerSiguiente();
+
+            if(actual->obtenerCiudad() == ciudad){
+                anterior->cambiarSiguiente(actual->obtenerSiguiente());
+                delete actual;
+                numNodos--;
+                cout << "Se eliminó el nodo que representaba a " << ciudad << endl;
+            }
+            else {
+                cout << "No se encontró el nodo que representa a " << ciudad << endl;
+            }
+        }
+    }
+    else {
+        cout << "No se encontró el nodo que representa a " << ciudad << endl;
+    }
+}
+
 void Grafo::agregarNodo(NodoG* nodo)
 {
     NodoG* aux = primero;

@@ -43,7 +43,7 @@ class NodoG
         // Elimina todas las aristas pertenecientes al nodo
         void eliminarAristas();
 
-        // Elimina una arista del nodo que lo conecte con ciudadDestino
+        // Elimina del nodo la arista que lo conecte con ciudadDestino
         void eliminarArista(string ciudadDestino); 
 
 };
