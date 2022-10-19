@@ -74,3 +74,31 @@ void NodoG::eliminarAristas()
         numAristas--;
     }
 }
+
+void NodoG::eliminarArista(string ciudadDestino)
+{
+    if(aristaCabeza->obtenerDestino()->obtenerCiudad() == ciudadDestino){
+        Arista* borrar = aristaCabeza;
+        aristaCabeza = borrar->obtenerSiguiente();
+        delete borrar;
+        cout << "Se elimino la arista con destino " << ciudadDestino << endl;
+    }
+    else if(numAristas > 1){
+        Arista* anterior = aristaCabeza;
+        for (int i=1; i<numAristas; i++) {
+            Arista* actual = anterior->obtenerSiguiente();
+
+            if(actual->obtenerDestino()->obtenerCiudad() == ciudadDestino){
+                anterior->cambiarSiguiente(actual->obtenerSiguiente());
+                delete actual;
+                cout << "Se elimino la arista con destino " << ciudadDestino << endl;
+            }
+            else{
+                cout << "No se encontro la arista con destino " << ciudadDestino << endl;
+            }
+        }
+    }
+    else {
+        cout << "No se encontro la arista con destino " << ciudadDestino << endl;
+    }
+}
