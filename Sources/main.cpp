@@ -11,12 +11,12 @@ int main()
     NodoG* cord = new NodoG("Cordoba");
     NodoG* ros = new NodoG("Rosario");
     
-    bsas->agregarArista(bsas, cord, 1200);
-    bsas->agregarArista(bsas, ros, 3000);
+    bsas->agregarArista(cord, 1200);
+    bsas->agregarArista(ros, 3000);
 
-    ros->agregarArista(ros, bsas,3000);
+    ros->agregarArista(bsas,3000);
 
-    cord->agregarArista(cord, ros, 200);
+    cord->agregarArista(ros, 200);
     
     Grafo* grafo = new Grafo();
 
