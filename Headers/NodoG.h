@@ -38,7 +38,7 @@ class NodoG
         void cambiarSiguiente(NodoG*);
 
         // Crea una nueva arista y la agrega a la lista de aristas del nodo
-        void agregarArista(NodoG* nodoOrigen, NodoG* nodoDestino, double distancia);
+        void agregarArista(NodoG* nodoDestino, double distancia);
 
         // Elimina todas las aristas pertenecientes al nodo
         void eliminarAristas();

@@ -6,20 +6,13 @@ class NodoG;
 class Arista 
 {
     private:
-        NodoG* origen; // Puntero al nodo origen de la arista
         NodoG* destino; // Puntero al nodo destino de la arista
         double distancia; // Distancia del nodo 'origen' al nodo 'destino'
         Arista* siguiente; // Puntero a una siguiente arista perteneciente al nodo origen
     public:
         // Constructores
         Arista();
-        Arista(NodoG* nodoOrigen, NodoG* nodoDestino, double distanciaEntre);
-
-        // Retorna el valor del atributo origen
-        NodoG* obtenerOrigen();
-
-        // Cambia el valor del atributo origen
-        void cambiarOrigen(NodoG* nuevoOrigen);
+        Arista(NodoG* nodoDestino, double distanciaEntre);
 
         // Retorna el valor del atributo destino
         NodoG* obtenerDestino();
