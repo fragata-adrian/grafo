@@ -37,11 +37,14 @@ class NodoG
         // Cambia el puntero al siguiente nodo
         void cambiarSiguiente(NodoG*);
 
-        // Agrega una nueva arista a la lista de aristas del nodo
+        // Crea una nueva arista y la agrega a la lista de aristas del nodo
         void agregarArista(NodoG* nodoOrigen, NodoG* nodoDestino, double distancia);
 
         // Elimina todas las aristas pertenecientes al nodo
         void eliminarAristas();
+
+        // Elimina del nodo la arista que lo conecte con ciudadDestino
+        void eliminarArista(string ciudadDestino); 
 
 };
 
