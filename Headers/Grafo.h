@@ -30,6 +30,12 @@ class Grafo
 
         // Agrega un nodo al grafo
         void agregarNodo(NodoG* nodo);
+
+        // Elimina del grafo todas las aristas con el destino indicado.
+        void eliminarAristasConDestino(string destino);
+
+        // Libera la memoria
+        virtual ~Grafo();
 };
 
 #endif //GRAFO_H_INCLUDED

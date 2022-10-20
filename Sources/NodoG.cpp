@@ -66,41 +66,50 @@ void NodoG::agregarArista(NodoG* nodoOrigen, NodoG* nodoDestino, double distanci
 
 void NodoG::eliminarAristas()
 {   
-    while(numAristas != 0){
+    while(numAristas > 0){
         Arista* borrar = aristaCabeza;
-        Arista* aux = aristaCabeza->obtenerSiguiente();
+        Arista* aux;
+        if(numAristas>1){
+            aux = aristaCabeza->obtenerSiguiente();
+            aristaCabeza = aux;
+        }
         delete borrar;
-        aristaCabeza = aux;
         numAristas--;
     }
 }
 
 void NodoG::eliminarArista(string ciudadDestino)
-{
-    if(aristaCabeza->obtenerDestino()->obtenerCiudad() == ciudadDestino){
-        Arista* borrar = aristaCabeza;
-        aristaCabeza = borrar->obtenerSiguiente();
-        delete borrar;
-        numAristas--;
-        cout << "Se elimino la arista con destino " << ciudadDestino << endl;
-    }
-    else if(numAristas > 1){
-        Arista* anterior = aristaCabeza;
-        for (int i=1; i<numAristas; i++) {
-            Arista* actual = anterior->obtenerSiguiente();
-
-            if(actual->obtenerDestino()->obtenerCiudad() == ciudadDestino){
-                anterior->cambiarSiguiente(actual->obtenerSiguiente());
-                delete actual;
-                numAristas--;
-                cout << "Se elimino la arista con destino " << ciudadDestino << endl;
+{   
+    if(numAristas>0){
+        if(aristaCabeza->obtenerDestino()->obtenerCiudad() == ciudadDestino){
+            Arista* borrar = aristaCabeza;
+            if(numAristas>1){
+                aristaCabeza = borrar->obtenerSiguiente();
             }
-            else{
+            delete borrar;
+            numAristas--;
+            cout << "Se elimino la arista con destino " << ciudadDestino << endl;
+        }
+        else {
+            if(numAristas > 1){
+                Arista* anterior = aristaCabeza;
+                for (int i=1; i<numAristas; i++) {
+                    Arista* actual = anterior->obtenerSiguiente();
+
+                    if(actual->obtenerDestino()->obtenerCiudad() == ciudadDestino){
+                        anterior->cambiarSiguiente(actual->obtenerSiguiente());
+                        delete actual;
+                        numAristas--;
+                        cout << "Se elimino la arista con destino " << ciudadDestino << endl;
+                    }
+                    else{
+                        cout << "No se encontro la arista con destino " << ciudadDestino << endl;
+                    }
+                }
+            }
+            else {
                 cout << "No se encontro la arista con destino " << ciudadDestino << endl;
             }
         }
-    }
-    else {
-        cout << "No se encontro la arista con destino " << ciudadDestino << endl;
     }
 }

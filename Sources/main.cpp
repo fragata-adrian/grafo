@@ -15,14 +15,22 @@ int main()
     bsas->agregarArista(bsas, ros, 3000);
 
     ros->agregarArista(ros, bsas,3000);
-    
-    Grafo* grafo;
 
-    grafo->cambiarPrimero(bsas);
+    cord->agregarArista(cord, ros, 200);
+    
+    Grafo* grafo = new Grafo();
+
+    grafo->agregarNodo(bsas);
     grafo->agregarNodo(cord);
     grafo->agregarNodo(ros);
     grafo->verNodos();
+
+    grafo->eliminarNodo("Cordoba");
     
-    grafo->eliminarNodos();
+
+    cout << "------------Grafo luego de borrar--------------"<<endl;
+    grafo->verNodos();
+    
+    grafo->~Grafo();
     return 0;
 }
